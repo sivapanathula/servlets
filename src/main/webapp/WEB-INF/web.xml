@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>servlets</display-name>
+	<context-param>
+		<param-name>studentName</param-name>
+		<param-value>MANJU</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>org.ms.servlets.HelloServlet</servlet-class>
+
+		<init-param>
+			<param-name>studentName</param-name>
+			<param-value>manju</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>GeneralServlet</servlet-name>
+		<servlet-class>org.ms.genericservlets.GeneralServlet</servlet-class>
+		<init-param>
+			<param-name>studentName</param-name>
+			<param-value>manju</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>GeneralHttpServlet</servlet-name>
+		<servlet-class>org.ms.httpservlets.GeneralHttpServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SingleThreadServlet</servlet-name>
+		<servlet-class>org.ms.singlethread.SingleThreadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DemoServlet</servlet-name>
+		<servlet-class>org.ms.httpservlets.DemoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ShowHeaders</servlet-name>
+		<servlet-class>org.ms.httpservlets.ShowHeaders</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletOne</servlet-name>
+		<servlet-class>org.ms.requestdispatcher.ServletOne</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletTwo</servlet-name>
+		<servlet-class>org.ms.requestdispatcher.ServletTwo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletContextDemo</servlet-name>
+		<servlet-class>org.ms.servletcontext.ServletContextDemo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletContextExample</servlet-name>
+		<servlet-class>org.ms.servletcontext.ServletContextExample</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RequestAttributeDemo</servlet-name>
+		<servlet-class>org.ms.attributes.RequestAttributeDemo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Resultservlet</servlet-name>
+		<servlet-class>org.ms.attributes.Resultservlet</servlet-class>
+	</servlet>
+<servlet>
+		<servlet-name>FilterServlet</servlet-name>
+		<servlet-class>org.ms.filter.FilterServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>FilterServletTwo</servlet-name>
+    <servlet-class>org.ms.filter.FilterServletTwo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SessionObjectServlet</servlet-name>
+    <servlet-class>org.ms.listeners.SessionObjectServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/servlet/HelloServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GeneralServlet</servlet-name>
+		<url-pattern>/servlet/GeneralServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GeneralHttpServlet</servlet-name>
+		<url-pattern>/servlet/GeneralHttpServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SingleThreadServlet</servlet-name>
+		<url-pattern>/servlet/SingleThreadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DemoServlet</servlet-name>
+		<url-pattern>/servlet/DemoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowHeaders</servlet-name>
+		<url-pattern>/servlet/ShowHeaders</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletOne</servlet-name>
+		<url-pattern>/servlet/ServletOne</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletTwo</servlet-name>
+		<url-pattern>/servlet/ServletTwo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletContextDemo</servlet-name>
+		<url-pattern>/servlet/ServletContextDemo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletContextExample</servlet-name>
+		<url-pattern>/servlet/ServletContextExample</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RequestAttributeDemo</servlet-name>
+		<url-pattern>/servlet/RequestAttributeDemo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Resultservlet</servlet-name>
+		<url-pattern>/servlet/Resultservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FilterServlet</servlet-name>
+		<url-pattern>/servlet/FilterServlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FilterServletTwo</servlet-name>
+    <url-pattern>/servlet/FilterServletTwo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SessionObjectServlet</servlet-name>
+    <url-pattern>/servlet/SessionObjectServlet</url-pattern>
+  </servlet-mapping>
+
+
+	<filter>
+		<filter-name>DemoFilter</filter-name>
+		<filter-class>org.ms.filter.DemoFilter</filter-class>
+		<init-param>
+			<param-name>studentName</param-name>
+			<param-value>siva</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>DemoFilter</filter-name>
+		<!-- <servlet-name>FilterServlet</servlet-name> -->
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<listener>
+	<listener-class>org.ms.listeners.ServletContextListeners</listener-class>
+	</listener>
+	<listener>
+	<listener-class>org.ms.listeners.HttpSessionListenerDemo</listener-class>
+	</listener>
+	
+	<session-config>
+	<session-timeout>1</session-timeout>
+	</session-config>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
