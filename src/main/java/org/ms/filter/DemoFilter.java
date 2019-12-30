@@ -22,6 +22,7 @@ public class DemoFilter implements Filter {
 			throws IOException, ServletException {
 
 		System.out.println("DemoFilter.dofilter().pre");
+                System.out.println("Iam testing the filter performance");
 		chain.doFilter(request, response);
 		System.out.println("DemoFilter.doFilter().post");
 
